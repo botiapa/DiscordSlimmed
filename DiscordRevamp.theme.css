@@ -169,6 +169,14 @@
 	transition: all 0.25s ease-out !important;
 }
 
+.searchBar-3dMhjb[aria-expanded="false"]:hover {
+	width:100px;
+}
+
+.open-6_Y_aH .searchBar-3dMhjb{
+	width: 220px !important;
+}
+
 .icon-38sknP{
 	cursor: pointer;
 }
@@ -464,4 +472,15 @@
 	max-width:24px;
 	max-height:24px;
 	margin-right:2px;
+}
+
+/*** Make members sidebar smaller  ***/
+
+.membersWrap-2h-GB4 {
+	zoom: 75%;
+}
+
+*[id^="popout"] {
+	zoom: 75%;
+	margin-right: 455px;
 }
