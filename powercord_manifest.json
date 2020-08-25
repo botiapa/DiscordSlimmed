@@ -1,8 +1,8 @@
 {
-    "name": "Discord Revamp",
-    "description": "A revamped discord based on discord's current website.",
+    "name": "Discord Slim",
+    "description": "The theme is based on Discord Revamped. It's main goal, to make everything smaller, but the content, which actually matters.",
     "version": "1.0.0",
-    "author": "hellbound#9999",
+    "author": "Vaffanculo#5892",
     "theme": "DiscordRevamp.theme.css",
     "splashTheme": "splash.css",
     "license": "Unlicensed"
