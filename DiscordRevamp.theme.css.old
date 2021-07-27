@@ -1,0 +1,538 @@
+/***
+ * @name Discord Slimmed
+ * @version 2.0
+ * @description A theme that makes everything smaller.
+ * @source https://github.com/botiapa/DiscordSlimmed
+ * @authorId 132794741480751104
+ * @author Vaffanculo
+ * @donate To charities
+***/
+
+@import url('https://gibbu.github.io/BetterDiscord-Themes/addons/windows-titlebar.css');
+
+.theme-dark,
+.theme-light,
+:root {
+    --background-primary: #292841 !important;
+    --background-secondary: #242338 !important;
+    --background-secondary-alt: #3c3a5e !important;
+    --background-tertiary: #1c1b29 !important;
+    --background-accent: #413f66 !important;
+    --background-floating: #15141e !important;
+    --background-modifier-hover: rgba(255,255,255,0.01) !important;
+    --background-modifier-active: rgba(255,255,255,0.03) !important;
+    --background-modifier-selected: rgba(255,255,255,0.04) !important;
+    --background-modifier-accent: hsla(0,0%,100%,0.06) !important;
+    --channeltextarea-background: var(--background-accent) !important;
+    --deprecated-card-bg: rgba(0, 0, 0, 0.2) !important;
+    --deprecated-card-editable-bg: rgba(0,0,0,0.1) !important;
+    --deprecated-text-input-bg: var(--background-tertiary) !important;
+    --deprecated-text-input-border: var(--background-floating) !important;
+    --deprecated-text-input-border-disabled: var(--background-tertiary) !important;
+    --activity-card-background: var(--background-primary) !important;
+    --channels-default: #9f9f9f !important;
+    --text-muted: #b6b6b6 !important;
+    --text-normal: #fbfbfb !important; 
+    --interactive-normal: #c8c8c8 !important;
+    --interactive-hover: #dcddde !important;
+    --interactive-active: #fff !important;
+    --interactive-muted: #747474 !important;
+    --header-primary: white !important;
+    --header-secondary: #c9c9c9 !important;
+    --toast-background: var(--background-primary) !important;
+    --toast-header: var(--background-tertiary) !important;
+    --toast-contents: var(--background-secondary) !important;
+    --toast-box-shadow: rgba(0, 0, 0, .2) !important;
+    --toast-border: var(--background-tertiary) !important;
+}
+
+/* Updated version of the Hide Nitro Gift and GIF buttons with support for Stickers button */
+[aria-label="Send a gift"], [aria-label="Open GIF picker"] {display: none;}
+
+
+/*  
+	CUSTOM PART
+*/
+/*
+ * TODO: Custom typing message display
+ * TODO: Sidebar animation
+ * TODO: Sidebar server icon size while dragging
+*/
+
+/*
+ *THESE WERE STOLED FROM CSS-SNIPPETS! Thank you everyone!
+ 
+*/
+
+:root {
+    --spotify-color: #7289DA !important;
+}
+
+.panels-j1Uci_ > .container-3baos1 button[aria-checked="false"], .panels-j1Uci_ > .container-3baos1 button:not([role="switch"]) /* mute/deafen/settings buttons */ {
+  transition: opacity 0.1s ease-out;
+  opacity:0.5;
+}
+
+.panels-j1Uci_ > .container-3baos1:hover button.button-14-BFJ /* mute/deafen/settings buttons */ {
+  transition: opacity 0.2s ease-out;
+  opacity:1;
+}
+
+.powercord-spotify .horizontal-1ae9ci * {
+    width: 0px !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+}
+.powercord-spotify:hover .horizontal-1ae9ci * {
+    width: 32px !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+}
+
+.note-QfFU8y textarea,
+.note-3HfJZ5 textarea  {
+   height: 25px !important;
+}
+
+#app-mount .wrapper-3NnKdC.guilds-1SWlCJ .scroller-1Bvpku {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebar-2K8pFh{
+  width: 0px;
+  transition: 0.6s ease;
+  z-index: 1;
+  bottom: 10px;
+}
+
+
+/* 
+ * ACTUAL ORIGINAL CONTENT STARTS HERE
+*/
+
+/*** Window Buttons ***/
+winButton-iRh8-Z > svg {
+   display: none;
+}
+.winButton-iRh8-Z:hover {
+   background-color: var(--background-teritary);
+}
+.winButton-iRh8-Z {
+   pointer-events: none;
+   margin-left: -3px;
+}
+.winButton-iRh8-Z::after {
+   content: "";
+   padding: 7px;
+   border-radius: 50px;
+   pointer-events: fill;
+}
+.winButtonClose-1HsbF- {
+   margin-right: 3px;
+}
+
+:root {
+	--TB-position-top: -1px;
+    --TB-position-right: 0px;
+    --TB-height: 40px;
+    --TB-width: 40px;
+	--TB-header-padding: 125px;
+	
+	--shadow-2dp: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
+	--shadow-4dp: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+	--sidebar-item-size: 32px;
+	--sidebar-group-padding: 10px;
+}
+
+.title-3qD0b- {
+	height:40px;
+	font-size:1dp;
+	/*background-color:#383759 !important;*/
+}
+.children-19S4PO:after {
+	background:transparent !important;
+}
+
+.iconWrapper-2OrFZ1 {
+	height: 18px;
+	width:12px;
+}
+
+/* Hide help icon*/
+[aria-label="Help"] { 
+	display:none;
+}
+
+[aria-label="Channel header"] {
+	font-size:0.5dp !important;
+}
+
+/* Hide inbox */
+[aria-label="Inbox"] { 
+	display: none;
+}
+
+/* Fix pinned messages alert notification */
+[aria-label="Pinned Messages"] span{
+	top:11.5px;
+	left:14px;
+}
+
+[aria-label="Text Channel"] svg, [aria-label="Direct Message"] svg {
+  height: 15px;
+}
+
+/* Make every topbar icon smaller */
+.icon-22AiRD { 
+	width:22px;
+	height:22px;
+	max-width: 20px;
+	max-height: 20px;
+}
+
+/* Make top search bar smaller on default */
+.search-36MZv- {
+	height:22px;
+	cursor: pointer;
+}
+
+.searchBar-3dMhjb {
+	margin-left:-6px;
+	width:28px;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.25s ease-out !important;
+}
+
+.searchBar-3dMhjb[aria-expanded="false"]:hover {
+	width:100px;
+}
+
+.open-6_Y_aH .searchBar-3dMhjb{
+	width: 220px !important;
+}
+
+.icon-38sknP{
+	cursor: pointer;
+}
+
+.searchBar-3dMhjb svg {
+	cursor: pointer;
+}
+
+.focused-31_ccS .searchBar-3dMhjb {
+	background-color: var(--background-tertiary);
+}
+
+/* Make sidebar search smaller */
+[aria-label="Private channels"] .searchBar-6Kv8R2{ 
+	height: 40px;
+}
+[aria-label="Private channels"] .searchBarComponent-32dTOx{ 
+	height: 25px;
+}
+
+/* Make sidebar topbar smaller in height */
+.header-2o-2hj {
+	height:40px;
+}
+.header-2o-2hj .name-3YKhmS {
+	font-size: 16px;
+}
+
+/* Make whole sidebar smaller in width */
+.sidebar-2K8pFh {
+	width:215px;
+}
+
+/* Make sidebar channels smaller in height */
+.wrapper-1ucjTd {
+	height: 28px;
+}
+
+/* Make space between sidebar channel name and symbol smaller  */
+.content-3at_AU {
+	margin-left: 4px;
+}
+
+/* Move channel unread notification to correct location */
+.unread-3zKkbm {
+	margin-top: -2px;
+}
+
+/* Make sidebar channel symbol smaller */
+.wrapper-1ucjTd .icon-1_QxNX{
+	width:16px !important;
+	height:16px !important;
+	max-width:16px !important;
+	max-height:16px !important;
+	margin-right:4px;
+}
+
+/* Sidebar unreads styling */
+.unreadBar-3YD_k9 {
+	opacity:100%;
+	box-shadow: var(--shadow-2dp);
+}
+
+/* Set message font size */
+#messages .markup-2BOw-j{
+	font-size: 1rem !important;
+}
+
+/* Custom typing display*/
+/*.typing-2GQL18 {
+	position:absolute;
+	bottom: 55px;
+	
+	padding:4px;
+	border-radius:30px;
+}*/
+
+/* Add border to form to distinguish */
+.form-2fGMdU {
+	padding:0px 8px;
+}
+
+.scrollableContainer-2NUZem {
+	box-shadow: var(--shadow-4dp);
+}
+/* Move jump to present bar to correct location */
+.jumpToPresentBar-9P20AM {
+	margin-bottom: 15px;
+	padding:0px;
+	border-radius:15px;
+	box-shadow: var(--shadow-2dp);
+}
+
+/* Style new messages bar */
+.newMessagesBar-mujexs {
+	background-color:var(--background-accent);
+	box-shadow: var(--shadow-2dp);
+}
+
+/* Welcome title styling */
+.inner-3GZ54g {
+	max-width:99999px;
+	background-color: var(--background-accent);
+	padding: 35px;
+	border-radius: 30px;
+	box-shadow: var(--shadow-2dp);
+}
+
+/*** Make servers sidebar smaller ***/
+
+.base-3dtUhz {
+	left: calc( var(--sidebar-item-size) + var(--sidebar-group-padding) + 20px )
+}
+
+[aria-label="Servers"] {
+	width:calc(var(--sidebar-item-size) + var(--sidebar-group-padding) + 18px) !important;
+	
+}
+
+[aria-label="Servers"] .selected > .wrapper-sa6paO { /* Originally height:48px */
+	height:16px !important;
+}
+
+[aria-label="Servers"] .wrapper-sa6paO { /* Originally height:48px */
+	height:16px !important;
+}
+
+[aria-label="Servers"] .wrapper-sa6paO[aria-hidden="true"] { /* Originally height:48px */
+	margin-top:8px !important;
+}
+
+[aria-label="Servers"] .selected > .wrapper-sa6paO > span { /* Originally height:48px */
+	height:16px !important;
+}
+
+
+.wrapper-sa6paO { 
+	/*width:5px;*/
+}
+
+/* Line between the first and second item */
+.scroller-2TZvBN > .listItem-2P_4kh:nth-of-type(1){
+	padding-left: inherit;
+}
+
+.tutorialContainer-1v44GL > .listItem-2P_4kh:nth-of-type(1) {
+	padding-left:calc(var(--sidebar-group-padding) * 2);
+}
+
+.listItem-2P_4kh {
+	width:calc(var(--sidebar-item-size));
+	padding-left:calc((var(--sidebar-item-size) / 4 * 1.5) + var(--sidebar-group-padding) / 2);
+}
+
+[aria-label="Servers"] > .listItem-2P_4kh {
+	width:calc(var(--sidebar-item-size) - 8);
+	padding-left:calc((var(--sidebar-item-size) / 4 * 1.5) + var(--sidebar-group-padding) / 2 - 8)
+}
+
+[aria-label="Servers"] .blobContainer-239gwq {
+	width:var(--sidebar-item-size);
+	height:var(--sidebar-item-size);
+}
+
+[aria-label="Servers"] .wrapper-21YSNc {
+	height:calc(var(--sidebar-item-size) + 8);
+	width:calc(var(--sidebar-item-size) + var(--sidebar-group-padding));
+	margin-left: -0px;
+}
+
+[aria-label="Servers"] .expanded {
+	height:auto;
+}
+
+[aria-label="Servers"] .wrapper-21YSNc .listItem-2P_4kh {
+	height:var(--sidebar-item-size);
+}
+
+[aria-label="Servers"] .wrapper-21YSNc .listItem-2P_4kh:nth-of-type(1) {
+	padding-top:5px;
+}
+
+:not([data-folder-name]) [aria-label="Servers"] .wrapper-21YSNc .listItem-2P_4kh  div:nth-child(2) {
+	width:calc(var(--sidebar-item-size) + 8px);
+}
+
+.icon-3o6xvg {
+	width: 18px !important;
+	height: 18px !important;
+}
+
+/* Folder list inner */
+[aria-label="Servers"] .expandedFolderBackground-1cujaW {
+	width:calc(var(--sidebar-item-size) + var(--sidebar-group-padding));
+	margin-left:-4px;
+}
+
+[aria-label="Servers"] .wrapper-21YSNc [role="group"] {
+	width:32px;
+	height: auto !important;
+	padding-bottom:5px;
+}
+
+[aria-label="Servers"] .wrapper-25eVIn svg {
+	max-width: var(--sidebar-item-size) !important;
+	max-height: var(--sidebar-item-size) !important;
+}
+
+
+[aria-label="Servers"] .lowerBadge-29hYVK {
+	/*bottom: 14px;
+	left: 17px;*/
+	transform: scale(0.85) translate(-60%, -100%) !important;
+
+}
+
+[aria-label="Servers"] .upperBadge-2XnnGB {
+	position:absolute;
+	margin-bottom:-30px;
+	bottom: 0px;
+	left: 18px;
+	width:16px;
+	height:16px;
+}
+
+.tutorialContainer-SGrQ1h .listItemWrapper-3X98Pc {
+	width:calc(var(--sidebar-item-size) + 8px);
+	height:var(--sidebar-item-size);
+}
+
+.tutorialContainer-1v44GL svg{
+	max-width:var(--sidebar-item-size);
+	max-height:var(--sidebar-item-size);
+}
+
+.tutorialContainer-1v44GL .listItemWrapper-3X98Pc {
+	width:calc(var(--sidebar-item-size) + 8px);
+	height:var(--sidebar-item-size);
+}
+
+.tutorialContainer-SGrQ1h svg{
+	max-width:var(--sidebar-item-size);
+	max-height:var(--sidebar-item-size);
+}
+
+.unreadMentionsIndicatorTop-gA6RCh, .unreadMentionsIndicatorBottom-BXS58x{ /* The click event is buggy */
+	display: none;
+}
+
+/* Select last element in the sidebar */
+.scroller-2TZvBN > .listItem-2P_4kh .listItemWrapper-3X98Pc {
+	width:calc(var(--sidebar-item-size) + 8px);
+	height:var(--sidebar-item-size);
+}
+
+.scroller-2TZvBN > .listItem-2P_4kh .listItemWrapper-3X98Pc svg {
+	width:var(--sidebar-item-size);
+	height:var(--sidebar-item-size);
+}
+
+
+
+/*** Make bottom left panel smaller ***/
+
+[aria-label="User area"] {
+	background-color: var(--background-primary) !important;
+}
+
+.container-3baos1  {
+	height:40px;
+}
+
+.title-eS5yk3 {
+	font-size: 13px !important;
+}
+
+.subtext-3CDbHg {
+	font-size: 12px;
+}
+
+:not([aria-label="Powercord (server)"]) [aria-label="Mute"] svg, [aria-label="Deafen"] svg, [aria-label="User Settings"] svg {
+	max-width:18px;
+	max-height:18px;
+}
+
+:not([aria-label="Powercord (server)"]) [aria-label="Mute"], [aria-label="Deafen"], [aria-label="User Settings"] {
+	width:25px;
+	height:25px;
+}
+
+[aria-label="Set Status"] {
+	padding-top: 2px;
+}
+
+.avatar-SmRMf2 {
+	max-height:24px;
+	max-width: 24px;
+	margin-right:2px;
+}
+
+.spotify-cover {
+	max-width:24px;
+	max-height:24px;
+	margin-right:2px;
+}
+
+/*** Make members sidebar smaller  ***/
+
+.membersWrap-2h-GB4 {
+	zoom: 75%;
+}
+
+*[id^="popout"] {
+	zoom: 75%;
+	margin-right: 455px;
+}
+
+/*** Friends list ***/
+.container-1D34oG {
+	background-color: var(--background-primary) !important;
+}
